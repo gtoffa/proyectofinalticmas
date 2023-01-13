@@ -1,11 +1,11 @@
 body {
     background-color: rgb(235, 235, 235);
-    
+
 
 }
 
 
-.fontSofia{
+.fontSofia {
     font-family: 'Sofia Sans', sans-serif;
     font-weight: 200;
 }
@@ -41,7 +41,7 @@ body {
     width: 70%;
     margin-left: 30%;
     border-radius: 40px;
-    position:relative;
+    position: relative;
 }
 
 .line-rectangle-radius {
@@ -54,19 +54,19 @@ body {
     border-radius: 40px;
 }
 
-.subtitle{
+.subtitle {
     letter-spacing: .1em;
-    font-weight:  bold;
+    font-weight: bold;
 }
 
-.profile{
+.profile {
     font-size: 1em;
     width: 80%;
     margin-left: 20%;
     font-weight: 300;
 }
 
-.subtitleh2{
+.subtitleh2 {
     font-size: 1.3em;
     font-weight: 500;
     width: 80%;
@@ -74,7 +74,26 @@ body {
     line-height: 1;
 }
 
-.subtitleh2 > span {
+.subtitleh2>span {
     font-size: 0.8em;
     font-weight: 500;
+
+}
+
+.subtitleh2>i {
+    font-size: 0.7em;
+
+
+}
+
+
+.interests {
+   
+    width: 60%;
+    margin-left: 45%;
+}
+
+.interests > div > i{
+   
+    font-size: 2.5em;
 }
