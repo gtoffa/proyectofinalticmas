@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(235, 235, 235);
+    
+
+}
+
+
+.fontSofia{
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: 200;
+}
+
+.divgradient {
+
+    background: linear-gradient(0deg, rgb(235, 235, 235, 1) 50%, rgba(45, 47, 58, 1) 50%);
+    height: 100%;
+}
+
+.name {
+    color: #222128;
+    font-weight: 500;
+    font-size: 3em;
+}
+
+.lastname {
+    color: #FEC905;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.vocation {
+    color: #222128;
+    font-weight: 500;
+    font-size: 1.4em;
+    letter-spacing: .1em;
+}
+
+.line {
+    background-color: #ECECEC;
+    height: 3px;
+    width: 70%;
+    margin-left: 30%;
+    border-radius: 40px;
+    position:relative;
+}
+
+.line-rectangle-radius {
+    position: absolute;
+    background-color: #FEC905;
+    height: 15px;
+    width: 25%;
+    margin-left: 75%;
+    margin-top: -5px;
+    border-radius: 40px;
+}
+
+.subtitle{
+    letter-spacing: .1em;
+    font-weight:  bold;
+}
+
+.profile{
+    font-size: 1em;
+    width: 80%;
+    margin-left: 20%;
+    font-weight: 300;
+}
+
+.subtitleh2{
+    font-size: 1.3em;
+    font-weight: 500;
+    width: 80%;
+    margin-left: 20%;
+    line-height: 1;
+}
+
+.subtitleh2 > span {
+    font-size: 0.8em;
+    font-weight: 500;
+}
