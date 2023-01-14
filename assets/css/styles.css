@@ -5,6 +5,20 @@ body {
 }
 
 
+#cv {
+    position: relative;
+}
+
+#loading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0px auto;
+    backdrop-filter: blur(30px);
+    z-index: 99999;
+}
+
+
 .fontSofia {
     font-family: 'Sofia Sans', sans-serif;
     font-weight: 200;
@@ -16,19 +30,19 @@ body {
     height: 100%;
 }
 
-.name {
+#name {
     color: #222128;
     font-weight: 500;
     font-size: 3em;
 }
 
-.lastname {
+#lastname {
     color: #FEC905;
     font-weight: 700;
     font-size: 3em;
 }
 
-.vocation {
+#dob {
     color: #222128;
     font-weight: 500;
     font-size: 1.4em;
@@ -141,5 +155,5 @@ body {
 
 .rounded-circle {
     border-radius: 50% !important;
-     
+
 }

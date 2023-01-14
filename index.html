@@ -23,21 +23,36 @@
 
 
     <div class="divgradient">
-        <section class="py-5  container">
+
+
+
+
+        <section id="cv" class="py-5  container">
             <div class="row py-lg-5">
                 <div class="col-lg-10 col-md-8 mx-auto">
 
 
                     <div class="card rounded-0  ">
+
+                        <div id="loading">
+                            <div class="d-flex justify-content-center mt-6">
+                                <button class="btn btn-primary mt-5" type="button" disabled>
+                                    <span class="spinner-border spinner-border-sm" role="status"
+                                        aria-hidden="true"></span>
+                                    Cargando...
+                                </button>
+                            </div>
+                        </div>
+
                         <!-- Datos de identificación -->
                         <div class="row ">
                             <!-- descripción principal -->
                             <div class="col-lg-5  mr-3 text-end   ">
                                 <div class="p-4">
                                     <div class="mt-5 ">
-                                        <h1 class="name fontSofia">ELIZABETH</h1>
-                                        <h2 class="lastname fontSofia">SMITH</h2>
-                                        <p class="vocation fontSofia">UI DESGNET</p>
+                                        <h1 id="name" class=" fontSofia">ELIZABETH</h1>
+                                        <h2 id="lastname" class="fontSofia">SMITH</h2>
+                                        <p id="dob" class=" fontSofia">Edad 26</p>
                                         <div align="left" class="line">
                                             <div class="line-rectangle-radius"></div>
                                         </div>
@@ -64,34 +79,34 @@
                             <!-- foto de perfil -->
                             <div class="col-lg-7 col-md-8">
 
-                                <img src="https://randomuser.me/api/portraits/women/10.jpg" width="100%"
+                                <img id="image" src="https://randomuser.me/api/portraits/women/10.jpg" width="100%"
                                     class="img-fluid " alt="...">
                             </div>
                         </div>
                         <!-- Datos secundarios -->
-                        <div class="row  " style="margin-top: -1em; position: relative;">
+                        <div class="row" style="margin-top: -1em; position: relative;">
                             <!-- datos col 1 -->
                             <div class="col-lg-5 mt-4  text-end">
                                 <div class="p-4">
 
                                     <h4 class="subtitle">
-                                        CONTACT
+                                        CONTACTO
 
                                     </h4>
-                                    <p class="subtitleh2 fontSofia mt-4">Phone
+                                    <p class="subtitleh2 fontSofia mt-4">Celular
                                         <br />
-                                        <span>+000 123 456 789</span>
+                                        <span id="cell">+000 123 456 789</span>
 
                                     </p>
                                     <p class="subtitleh2 fontSofia mt-4">Email
                                         <br />
-                                        <span>test@gmail.com</span>
+                                        <span id="email">test@gmail.com</span>
 
                                     </p>
 
                                     <p class="subtitleh2 fontSofia mt-4">Adress
                                         <br />
-                                        <span>calle</span>
+                                        <span id="street">calle</span>
 
                                     </p>
 
@@ -108,14 +123,14 @@
                                 <div class="p-5  text-start text-body bg-body" data-bs-theme="dark">
                                     <div style=" margin-left:30px">
                                         <h4 class="subtitle  ">
-                                            EDUCATION
+                                            EDUCACIÓN
                                         </h4>
                                         <div class="row">
                                             <div class="col-lg-6">
-                                                <p class="subtitleH2Black fontSofia  mt-4">Enter your major
+                                                <p class="subtitleH2Black fontSofia  mt-4">Ing en sistemas
                                                     <br />
                                                     <br />
-                                                    <span>Name of Your university </span>
+                                                    <span>Universidad UTN</span>
                                                     <br />
                                                     <span> 2005-2009</span>
                                                     <br />
@@ -127,12 +142,12 @@
                                             </div>
 
                                             <div class="col-lg-6">
-                                                <p class="subtitleH2Black fontSofia mt-4  ">Enter your major
+                                                <p class="subtitleH2Black fontSofia mt-4  ">Ing en sistemas
                                                     <br />
                                                     <br />
-                                                    <span>Name of Your university </span>
+                                                    <span>Universidad UNNE</span>
                                                     <br />
-                                                    <span> 2005-2009</span>
+                                                    <span> 2009-2010</span>
                                                     <br />
                                                     <br />
                                                     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -155,7 +170,7 @@
                                 <div class="p-4">
 
                                     <h4 class="subtitle">
-                                        EXPERTISE
+                                        HABILIDADES
 
                                     </h4>
                                     <p class="subtitleh2 fontSofia mt-4">
@@ -165,7 +180,14 @@
                                         </i>
 
                                     </p>
-                                    <p class="subtitleh2 fontSofia ">UX/UI Design
+                                    <p class="subtitleh2 fontSofia ">JavaScript
+                                        <i class="material-icons">
+                                            brightness_1
+                                        </i>
+
+
+                                    </p>
+                                    <p class="subtitleh2 fontSofia ">Java EE
                                         <i class="material-icons">
                                             brightness_1
                                         </i>
@@ -173,7 +195,7 @@
 
                                     </p>
 
-                                    <p class="subtitleh2 fontSofia ">Graphic Desgin
+                                    <p class="subtitleh2 fontSofia ">Flutter
                                         <i class="material-icons">
                                             brightness_1
                                         </i>
@@ -181,13 +203,7 @@
 
                                     </p>
 
-                                    <p class="subtitleh2 fontSofia ">3D Design
-                                        <i class="material-icons">
-                                            brightness_1
-                                        </i>
 
-
-                                    </p>
 
 
 
@@ -202,14 +218,14 @@
                                 <div class="p-5  text-start text-body bg-body" data-bs-theme="dark">
                                     <div style=" margin-left:30px">
                                         <h4 class="subtitle  ">
-                                            EXPERIENCE
+                                            EXPERIENCIA
                                         </h4>
                                         <div class="row">
                                             <div class="col-lg-6">
-                                                <p class="subtitleH2Black fontSofia mt-4">Enter your position
+                                                <p class="subtitleH2Black fontSofia mt-4">DEVELOPER
                                                     <br />
                                                     <br />
-                                                    <span>Company Name/Location</span>
+                                                    <span>Empresa 1</span>
                                                     <br />
                                                     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                                         do
@@ -219,10 +235,10 @@
                                             </div>
 
                                             <div class="col-lg-6">
-                                                <p class="subtitleH2Black fontSofia mt-4">Enter your position
+                                                <p class="subtitleH2Black fontSofia mt-4">DEVELOPER
                                                     <br />
                                                     <br />
-                                                    <span>Company Name/Location</span>
+                                                    <span>Empresa 2 </span>
                                                     <br />
                                                     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                                         do
@@ -245,7 +261,7 @@
                                 <div class="p-4">
 
                                     <h4 class="subtitle">
-                                        INTERESTS
+                                        INSTERESES
 
                                     </h4>
                                     <div class="row interests mt-4 ">
@@ -280,27 +296,27 @@
                                 <div class="p-5  text-start text-body bg-body" data-bs-theme="dark">
                                     <div style=" margin-left:30px">
                                         <h4 class="subtitle  ">
-                                            REFERENCE
+                                            REFERENCIA
                                         </h4>
                                         <div class="row">
                                             <div class="col-lg-6">
-                                                <p class="subtitleH2Black fontSofia mt-4">aLEX sMITH
+                                                <p id="refFirst" class="subtitleH2Black fontSofia mt-4">aLEX sMITH
                                                     <br />
                                                     <br />
-                                                    <span>Director Marix Media ltd.</span>
+                                                    <span >Director Marix Media ltd.</span>
                                                     <br />
-                                                    <span>Phone: +999 123 54</span>
+                                                    <span >Phone: +999 123 54</span>
 
                                                 </p>
                                             </div>
 
                                             <div class="col-lg-6">
-                                                <p class="subtitleH2Black fontSofia mt-4">aLEX sMITH
+                                                <p id="refSecon" class="subtitleH2Black fontSofia mt-4">aLEX sMITH
                                                     <br />
                                                     <br />
-                                                    <span>Director Marix Media ltd.</span>
+                                                    <span >Director Marix Media ltd.</span>
                                                     <br />
-                                                    <span>Phone: +999 123 54</span>
+                                                    <span id="refCellSecon">Phone: +999 123 54</span>
 
                                                 </p>
                                             </div>
@@ -353,17 +369,17 @@
                 </div><!-- /.row -->
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
-                      <li class="page-item disabled">
-                        <a class="page-link">Previous</a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                      </li>
+                        <li class="page-item disabled">
+                            <a class="page-link">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
                     </ul>
-                  </nav>
+                </nav>
             </div>
         </section>
 
@@ -377,6 +393,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
