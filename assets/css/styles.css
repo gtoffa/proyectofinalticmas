@@ -18,6 +18,15 @@ body {
     z-index: 99999;
 }
 
+#loadingSuggest {
+    position: absolute;
+    height: 20%;
+    width: 100%;
+    
+    backdrop-filter: blur(5px);
+    z-index: 99999;
+   
+}
 
 .fontSofia {
     font-family: 'Sofia Sans', sans-serif;

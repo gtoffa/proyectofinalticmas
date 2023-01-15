@@ -1,37 +1,36 @@
 //url base para la API
 const urlApi = 'https://randomuser.me/api/?nat=es';
-
-
+let currentSuggest;
+var currenPage = 0;
 //al cargar la pagina traemos un usuario random y 3 user
-window.addEventListener('load', function () {
-    loadCv();
-});
+loadPage();
 
 
-function loadCv() {
+function loadPage() {
 
+
+    //Cagar Cv principal
     document.getElementById("loading").style.visibility = "inline";
-    fetch(urlApi + '&results=3')
-        .then(response => response.json())
-        .then(data => setDataToCv(data));
-
-}
-
-function loadMultipleCv() {
-
-    document.getElementById("loading").style.visibility = "inline";
-    fetch(urlApi + '?nat=es')
+    fetch(urlApi)
         .then(response => response.json())
         .then(data => setDataToCv(data.results[0]));
 
+
+
+    loadItemSugest(1);
+
+
+    return false;
+
 }
+
+
 
 
 function setDataToCv(resulData) {
 
-    const user = resulData.results[0];
-    const refFirst = resulData.results[1];
-    const refSecon = resulData.results[2];
+    const user = resulData;
+
 
     document.getElementById('name').innerHTML = user.name.first;
     document.getElementById('lastname').innerHTML = user.name.last;
@@ -43,28 +42,101 @@ function setDataToCv(resulData) {
 
     document.getElementById('image').src = user.picture.large;
 
-    setReference('refFirst', refFirst);
-    setReference('refSecon', refSecon);
-
-
-
-
-
-
 
     document.getElementById("loading").style.display = "none";
 
-
 }
 
 
-function setReference(el, data) {
-    document.getElementById(el).innerHTML =
-        `${data.name.last}  ${data.name.first} 
-        <br />
-        <br />
-        <span >Director Marix Media ltd.</span>
-        <br />
-        <span >Phone: ${data.cell}</span>"`;
+function setPage(el) {
+
+    const parentNode = el.parentNode;
+
+    let btsPagination = document.getElementsByClassName("page-item");
+    for (var i = 0; i < btsPagination.length; i++) {
+        btsPagination[i].setAttribute('class', 'page-item');
+    }
+
+
+
+    switch (el.innerText) {
+        case 'Previo':
+            {
+                const pag = currenPage - 1
+                if (pag == 1) {
+                    parentNode.setAttribute('class', 'page-item disabled');
+                }
+
+                loadItemSugest(pag);
+                break;
+            }
+        case 'Siguiente':
+            {
+                const pag = currenPage + 1
+                if (pag == 3) {
+                    parentNode.setAttribute('class', 'page-item disabled');
+                }
+
+                loadItemSugest(pag);
+                break;
+            }
+        default:
+
+
+            loadItemSugest(el.innerText);
+            break;
+    }
+
 
 }
+
+function loadItemSugest(page) {
+    document.getElementById("loadingSuggest").style.visibility = "inline";
+    currenPage = parseInt(page);
+    let btsPagination = document.getElementsByClassName("page-item");
+    for (var i = 0; i < btsPagination.length; i++) {
+        if (btsPagination[i].firstChild.innerText == currenPage) {
+            btsPagination[i].setAttribute('class', 'page-item active');
+            break;
+        }
+    }
+
+
+
+
+    document.getElementById("loading").style.visibility = "inline";
+    fetch(urlApi + `&page=${page}&results=3&seed=gtoffa`)
+        .then(response => response.json())
+        .then(data => createItemSugest(data.results));
+
+
+}
+
+function createItemSugest(data) {
+
+    document.getElementById('suggest').innerHTML = '';
+
+
+
+    data.forEach(element => {
+        const para = document.createElement("div");
+        para.setAttribute('class', 'col-lg-4');
+        para.setAttribute('style', 'cursor: pointer;');
+        para.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: 'smooth' }); setDataToCv(element); });
+        para.innerHTML = createDivSuggest(element);
+        document.getElementById('suggest').appendChild(para);
+
+    });
+    document.getElementById("loadingSuggest").style.visibility = "none";
+}
+
+function createDivSuggest(element) {
+
+    return `<img src="${element.picture.large}"
+        class="bd-placeholder-img rounded-circle" width="140" height="140" class="img-fluid "
+        alt="...">
+    <h2 class="fw-normal">${element.name.last}  ${element.name.first} </h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>`
+
+}
+
