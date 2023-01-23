@@ -16,11 +16,11 @@ function loadPage() {
         .then(data => setDataToCv(data.results[0]));
 
 
-
+    //Carga de Cv sugeridos
     loadItemSugest(1);
 
 
-    return false;
+
 
 }
 
@@ -31,7 +31,7 @@ function setDataToCv(resulData) {
 
     const user = resulData;
 
-
+    //seteo de valores a las elementos html
     document.getElementById('name').innerHTML = user.name.first;
     document.getElementById('lastname').innerHTML = user.name.last;
     document.getElementById('dob').innerHTML = 'Edad ' + user.dob.age;
@@ -47,9 +47,9 @@ function setDataToCv(resulData) {
 
 }
 
-
+//Carga la pagina
 function setPage(el) {
-
+    
     const parentNode = el.parentNode;
 
     let btsPagination = document.getElementsByClassName("page-item");
@@ -90,10 +90,21 @@ function setPage(el) {
 
 }
 
+
 function loadItemSugest(page) {
-    document.getElementById("loadingSuggest").style.visibility = "inline";
+
+    //se muestra el div de carga
+    document.getElementById("loadingSuggest").style.visibility = "visible";
+
+
+    //se almacena en la variable global en numero de pagina
     currenPage = parseInt(page);
+
+    //se obtienen todos los botones con la clase PAGE-ITEM 
     let btsPagination = document.getElementsByClassName("page-item");
+
+
+    //se recorrien todos los botones  seteneado la clase ACTIVE al que corresponde con el numero e pagina
     for (var i = 0; i < btsPagination.length; i++) {
         if (btsPagination[i].firstChild.innerText == currenPage) {
             btsPagination[i].setAttribute('class', 'page-item active');
@@ -104,7 +115,8 @@ function loadItemSugest(page) {
 
 
 
-    document.getElementById("loading").style.visibility = "inline";
+    // se trae de la Api el numero de pagina #{i} con un total de 3 resultados y la semilla gtoffa,
+    // cuando termina se carga el cv del primer item 
     fetch(urlApi + `&page=${page}&results=3&seed=gtoffa`)
         .then(response => response.json())
         .then(data => createItemSugest(data.results));
@@ -119,15 +131,18 @@ function createItemSugest(data) {
 
 
     data.forEach(element => {
-        const para = document.createElement("div");
-        para.setAttribute('class', 'col-lg-4');
-        para.setAttribute('style', 'cursor: pointer;');
-        para.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: 'smooth' }); setDataToCv(element); });
-        para.innerHTML = createDivSuggest(element);
-        document.getElementById('suggest').appendChild(para);
+        const itemSuggest = document.createElement("div");
+        itemSuggest.setAttribute('class', 'col-lg-4');
+        itemSuggest.setAttribute('style', 'cursor: pointer;');
+        itemSuggest.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: 'smooth' }); setDataToCv(element); });
+        itemSuggest.innerHTML = createDivSuggest(element);
+        document.getElementById('suggest').appendChild(itemSuggest);
 
     });
-    document.getElementById("loadingSuggest").style.visibility = "none";
+    document.getElementById("loadingSuggest").style.visibility = "hidden";
+
+ 
+    
 }
 
 function createDivSuggest(element) {

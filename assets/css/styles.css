@@ -166,3 +166,8 @@ body {
     border-radius: 50% !important;
 
 }
+
+
+.page-link {
+cursor: pointer;
+}
