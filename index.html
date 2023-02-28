@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200;300;500;700&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -24,15 +26,54 @@
 
     <div class="divgradient">
 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">CV online</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
 
 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Favoritos
+                            </a>
+                            <ul id="menuff" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
 
-        <section id="cv" class="py-5  container">
-            <div class="row py-lg-5">
-                <div class="col-lg-10 col-md-8 mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Acerca de</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <button id="btnFF" class="btnAddFF btn-flotante">Agregar a Favoritos</button>
+        <section   class="py-5  container">
+            <h1 class="animate__animated animate__slideInUp" style="color: aliceblue; text-align: center; ">CV Seleccionado</h1>
+            <div  class="row py-lg-5  ">
+                <div  style=" height: 100%;" class="col-lg-10 col-md-8 mx-auto">
 
 
-                    <div class="card rounded-0  ">
+                    <div class="card rounded-0 shadow">
 
                         <div id="loading">
                             <div class="d-flex justify-content-center mt-6">
@@ -45,7 +86,7 @@
                         </div>
 
                         <!-- Datos de identificación -->
-                        <div class="row ">
+                        <div  class="row ">
                             <!-- descripción principal -->
                             <div class="col-lg-5  mr-3 text-end   ">
                                 <div class="p-4">
@@ -53,10 +94,11 @@
                                         <h1 id="name" class=" fontSofia">ELIZABETH</h1>
                                         <h2 id="lastname" class="fontSofia">SMITH</h2>
                                         <p id="dob" class=" fontSofia">Edad 26</p>
-                                        <div align="left" class="line">
-                                            <div class="line-rectangle-radius"></div>
-                                        </div>
-
+                                        
+                                            <div align="left" class="line ">
+                                                <div class="line-rectangle-radius animate__animated animate__backInLeft"></div>
+                                            </div>
+                                       
                                     </div>
                                     <div class="mt-5 ">
                                         <h4 class="subtitle">
@@ -77,9 +119,9 @@
 
                             </div>
                             <!-- foto de perfil -->
-                            <div class="col-lg-7 col-md-8">
+                            <div class="col-lg-7 col-md-8  " >
 
-                                <img id="image" src="https://randomuser.me/api/portraits/women/10.jpg" width="100%"
+                                <img  id="image" src="https://randomuser.me/api/portraits/women/10.jpg" width="100%"
                                     class="img-fluid " alt="...">
                             </div>
                         </div>
@@ -95,18 +137,19 @@
                                     </h4>
                                     <p class="subtitleh2 fontSofia mt-4">Celular
                                         <br />
-                                        <span id="cell">+000 123 456 789</span>
-
+                                        <a id="cell" href="#"></a>
                                     </p>
                                     <p class="subtitleh2 fontSofia mt-4">Email
                                         <br />
-                                        <span id="email">test@gmail.com</span>
+
+                                        <a id="email" href="#"></a>
 
                                     </p>
 
-                                    <p class="subtitleh2 fontSofia mt-4">Adress
+                                    <p class="subtitleh2 fontSofia mt-4">Dirección
                                         <br />
-                                        <span id="street">calle</span>
+                                        <a id="street" target="
+                                        _blank" href="#"></a>
 
                                     </p>
 
@@ -117,7 +160,7 @@
                                 </div>
                             </div>
                             <!-- datos col 2 -->
-                            <div class="line-rectangle-radius-union"></div>
+                            <div class="line-rectangle-radius-union animate__animated animate__bounceIn"></div>
 
                             <div class="col-lg-7">
                                 <div class="p-5  text-start text-body bg-body" data-bs-theme="dark">
@@ -212,7 +255,7 @@
                                 </div>
                             </div>
                             <!-- datos col 2 -->
-                            <div class="line-rectangle-radius-union"></div>
+                            <div class="line-rectangle-radius-union animate__animated animate__bounceIn"></div>
 
                             <div class="col-lg-7">
                                 <div class="p-5  text-start text-body bg-body" data-bs-theme="dark">
@@ -290,7 +333,7 @@
                                 </div>
                             </div>
                             <!-- datos col 2 -->
-                            <div class="line-rectangle-radius-union"></div>
+                            <div class="line-rectangle-radius-union animate__animated animate__bounceIn "></div>
 
                             <div class="col-lg-7">
                                 <div class="p-5  text-start text-body bg-body" data-bs-theme="dark">
@@ -335,10 +378,12 @@
                 </div>
             </div>
             <div class="container  text-center ">
-               
+
+
+                <h1>Sugerencias de CV</h1>
                 <!-- Three columns of text below the carousel -->
 
-                <div id="loadingSuggest"  >
+                <div id="loadingSuggest">
                     <div class="d-flex justify-content-center mt-6">
                         <button class="btn btn-primary mt-5" type="button" disabled>
                             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -371,13 +416,13 @@
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
                         <li class="page-item disabled">
-                            <a onclick="setPage(this)"  class="page-link">Previo</a>
+                            <a onclick="setPage(this)" class="page-link">Previo</a>
                         </li>
-                        <li class="page-item active"><a class="page-link" onclick="setPage(this)">1</a></li>
+                        <li class="page-item"><a class="page-link" onclick="setPage(this)">1</a></li>
                         <li class="page-item"><button class="page-link" onclick="setPage(this)">2</button></li>
                         <li class="page-item"><a class="page-link" onclick="setPage(this)">3</a></li>
                         <li class="page-item">
-                            <a class="page-link" onclick="setPage(this)"  >Siguiente</a>
+                            <a class="page-link" onclick="setPage(this)">Siguiente</a>
                         </li>
                     </ul>
                 </nav>
@@ -386,10 +431,45 @@
 
 
 
-
-
-
     </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Acerca de</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Ver 2.0.0.
+                    <hr />
+                    <p>La idea de esta presentación es mostrar una pequeña parte de un gran sistema de CV online donde
+                        los
+                        reclutadores pueden visualizar el cv, agregar a favoritos y navegar entre los postulantes, por
+                        otra
+                        parte, la API de sugerencia propuesta en el enunciado no proporciona imágenes de buena calidad
+                        ni
+                        tampoco suficiente información para cambiar las descripciones del CV, esto está detallado en el
+                        readme del repositorio.
+                    </p>
+
+                    Mejoras:
+                    <ul>
+                        <li>Link en la seccion de contacto</li>
+                        <li>NavBar con titulo de la pagina</li>
+                        <li>Listas de CV favoritos</li>
+                        <li>Botón Agregar/Quitar CV a Favoritos.</li>
+                        <li>Se mantiene el CV al recargar la pagina.</li>
+                        <li>Se mantiene número de página del paginado inferior</li>
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

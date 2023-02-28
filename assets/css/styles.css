@@ -4,6 +4,11 @@ body {
 
 }
 
+.shadow{
+box-shadow: 12px 16px 12px -3px rgba(166,76,222,0.72)!important;
+-webkit-box-shadow: 12px 16px 12px -3px rgba(166,76,222,0.72)!important;
+-moz-box-shadow: 12px 16px 12px -3px rgba(166,76,222,0.72)!important;
+}
 
 #cv {
     position: relative;
@@ -170,4 +175,58 @@ body {
 
 .page-link {
 cursor: pointer;
+}
+
+
+.btn-flotante {
+	font-size: 16px; 
+    border-color: transparent;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #ffffff;
+	border-radius: 5px; 
+	letter-spacing: 2px; 
+	background-color: rgba(166,76,222,0.72); 
+	padding: 18px 30px;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	transition: all 300ms ease 0ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	z-index: 99;
+}
+
+
+
+.btn-flotante-ff {
+	font-size: 16px; 
+    border-color: transparent;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #ffffff;
+	border-radius: 5px; 
+	letter-spacing: 2px; 
+	background-color: rgba(250, 0, 0, 0.72); 
+	padding: 18px 30px;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	transition: all 300ms ease 0ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	z-index: 99;
+}
+.btn-flotante:hover {
+	background-color: #2c2fa5;
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px);
+}
+
+
+@media only screen and (max-width: 600px) {
+ 	.btn-flotante {
+		font-size: 14px;
+		padding: 12px 20px;
+		bottom: 20px;
+		right: 20px;
+	}
 }
